@@ -43,7 +43,7 @@ namespace week4
                 xlWB = xlApp.Workbooks.Add(Missing.Value);
                 xlWS = xlApp.ActiveSheet;
 
-                //CreateTable();
+                CreateTable();
 
                 xlApp.Visible = true;
                 xlApp.UserControl = true;
@@ -66,6 +66,8 @@ namespace week4
 
         private void CreateTable()
         {
+            object[,] values = new object[Flats.Count, headers.Length];
+
             string[] headers = new string[] 
             {
                 "Kód",
@@ -82,6 +84,21 @@ namespace week4
             for (int i = 0; i < Excel.length; i++)
             {
                 xlWS.Cells[1, 1] = headers[0];
+
+                int counter = 0;
+                foreach (Flat f in Flats)
+                {
+                    values[counter, 0] = f.Code;
+                    values[counter, 1] = f.Vendor;
+                    values[counter, 2] = f.Side;
+                    values[counter, 3] = f.District;
+                    values[counter, 4] = f.Elevator;
+                    values[counter, 5] = f.NumberOfRooms;
+                    values[counter, 6] = f.FloorArea;
+                    values[counter, 7] = f.Price;
+                    values[counter, 8] = f.FlatSK;
+                    counter++;
+                }
 
             }
         }
