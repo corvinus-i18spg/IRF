@@ -89,10 +89,9 @@ namespace week6
                 var rate = new RateData();
                 Rates.Add(rate);
 
-                rate.Date = DateTime.Parse(element.GetAttribute("date"));
+                rate.Date = <dateTimePicker1.Value && >dateTimePicker2.Value;
 
-                var childElement = (XmlElement)element.ChildNodes[0];
-                rate.Currency = childElement.GetAttribute("curr");
+                rate.Currency = comboBox1.ValueMember.ToString();
 
                 var unit = decimal.Parse(childElement.GetAttribute("unit"));
                 var value = decimal.Parse(childElement.InnerText);
