@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using week6.MnbServiceReference;
 
 namespace week6
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
+
+            var mnbService = new MNBArfolyamServiceSoapClient();
+
+            var request = new GetExchangeRatesRequestBody()
+            {
+                currencyNames = "EUR",
+                startDate = "2020-01-01",
+                endDate = "2020-06-30"
+            };
         }
     }
 }
