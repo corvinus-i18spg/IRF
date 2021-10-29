@@ -31,6 +31,8 @@ namespace week6
 
             var response = mnbService.GetExchangeRates(request);
             var result = response.GetExchangeRatesResult;
+
+            dataGridView1.DataSource = Rates;
         }
 
 
