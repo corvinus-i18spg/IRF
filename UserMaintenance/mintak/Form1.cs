@@ -12,10 +12,10 @@ namespace mintak
 {
     public partial class Form1 : Form
     {
-        private List<Ball> _balls = new List<Ball>();
+        private List<Entities.Ball> _balls = new List<Entities.Ball>();
 
-        private BallFactory _factory;
-        public BallFactory Factory
+        private Entities.BallFactory _factory;
+        public Entities.BallFactory Factory
         {
             get { return _factory; }
             set { _factory = value; }
@@ -24,6 +24,9 @@ namespace mintak
         public Form1()
         {
             InitializeComponent();
+            Factory = new Entities.BallFactory();
         }
+
+
     }
 }
