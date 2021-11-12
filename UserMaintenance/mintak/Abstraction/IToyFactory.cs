@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace mintak.Abstraction
 {
-    interface IToyFactory
+    public interface IToyFactory
     {
+        Toy CreateNew();
     }
 }

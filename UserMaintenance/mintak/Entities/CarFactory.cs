@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace mintak.Entities
 {
-    class BallFactory: IToyFactory
+    class CarFactory: IToyFactory
     {
         public Toy CreateNew()
         {
-            return new Ball();
+            return new Car();
         }
     }
-
 }
