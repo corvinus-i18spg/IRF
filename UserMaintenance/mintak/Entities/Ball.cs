@@ -23,9 +23,5 @@ namespace mintak.Entities
             BallColor = new SolidBrush(color);
         }
 
-        protected override void DrawImage(Graphics g)
-        {
-            g.FillEllipse(BallColor, 0, 0, Width, Height);
-        }
     }
 }
