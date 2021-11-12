@@ -42,6 +42,16 @@ namespace mintak
             this.mainPanel.Size = new System.Drawing.Size(786, 455);
             this.mainPanel.TabIndex = 0;
             // 
+            // createTimer
+            // 
+            this.createTimer.Interval = 3000;
+            this.createTimer.Tick += new System.EventHandler(this.createTimer_Tick);
+            // 
+            // conveyorTimer
+            // 
+            this.conveyorTimer.Interval = 10;
+            this.conveyorTimer.Tick += new System.EventHandler(this.conveyorTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
