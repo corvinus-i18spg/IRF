@@ -33,7 +33,7 @@ namespace mintak
             this.mainPanel = new System.Windows.Forms.Panel();
             this.createTimer = new System.Windows.Forms.Timer(this.components);
             this.conveyorTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNext = new System.Windows.Forms.Label();
             this.btnCar = new System.Windows.Forms.Button();
             this.btnBall = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
@@ -43,7 +43,7 @@ namespace mintak
             // 
             this.mainPanel.Controls.Add(this.btnBall);
             this.mainPanel.Controls.Add(this.btnCar);
-            this.mainPanel.Controls.Add(this.label1);
+            this.mainPanel.Controls.Add(this.lblNext);
             this.mainPanel.Location = new System.Drawing.Point(2, -1);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(786, 455);
@@ -59,14 +59,14 @@ namespace mintak
             this.conveyorTimer.Interval = 10;
             this.conveyorTimer.Tick += new System.EventHandler(this.conveyorTimer_Tick);
             // 
-            // label1
+            // lblNext
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Coming next:";
+            this.lblNext.AutoSize = true;
+            this.lblNext.Location = new System.Drawing.Point(11, 14);
+            this.lblNext.Name = "lblNext";
+            this.lblNext.Size = new System.Drawing.Size(101, 20);
+            this.lblNext.TabIndex = 0;
+            this.lblNext.Text = "Coming next:";
             // 
             // btnCar
             // 
@@ -76,6 +76,7 @@ namespace mintak
             this.btnCar.TabIndex = 1;
             this.btnCar.Text = "CAR";
             this.btnCar.UseVisualStyleBackColor = true;
+            this.btnCar.Click += new System.EventHandler(this.btnCar_Click);
             // 
             // btnBall
             // 
@@ -85,6 +86,7 @@ namespace mintak
             this.btnBall.TabIndex = 2;
             this.btnBall.Text = "BALL";
             this.btnBall.UseVisualStyleBackColor = true;
+            this.btnBall.Click += new System.EventHandler(this.btnBall_Click);
             // 
             // Form1
             // 
@@ -107,7 +109,7 @@ namespace mintak
         private System.Windows.Forms.Timer conveyorTimer;
         private System.Windows.Forms.Button btnBall;
         private System.Windows.Forms.Button btnCar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNext;
     }
 }
 
