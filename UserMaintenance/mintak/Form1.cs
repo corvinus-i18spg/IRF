@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mintak.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,10 @@ namespace mintak
 {
     public partial class Form1 : Form
     {
-        private List<Entities.Ball> _balls = new List<Entities.Ball>();
+        private List<Ball> _balls = new List<Ball>();
 
-        private Entities.BallFactory _factory;
-        public Entities.BallFactory Factory
+        private BallFactory _factory;
+        public BallFactory Factory
         {
             get { return _factory; }
             set { _factory = value; }
