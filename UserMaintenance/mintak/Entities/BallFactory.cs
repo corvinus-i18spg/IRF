@@ -8,5 +8,10 @@ namespace mintak.Entities
 {
     class BallFactory
     {
+        public Ball CreateNew()
+        {
+            return new Ball();
+        }
     }
+
 }
