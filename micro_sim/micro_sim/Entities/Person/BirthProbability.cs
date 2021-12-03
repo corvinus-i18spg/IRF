@@ -10,7 +10,7 @@ namespace micro_sim.Entities.Person
     {
         public int Age { get; set; }
         public int NumberOfKids { get; set; }
-        public double Probability { get; set; }
+        public double P { get; set; }
 
     }
 }
