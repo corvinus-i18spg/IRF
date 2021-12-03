@@ -21,9 +21,13 @@ namespace micro_sim
         public Form1()
         {
             InitializeComponent();
+
+            Population = GetPopulation(@"C:\Temp\nép.csv");
+            BirthProbabilities = GetBirthProbabilities(@"C:\Temp\születés.csv");
+            DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
         }
 
-        public List<Person> GetPeople(string csvpath)
+        public List<Person> GetPopulation(string csvpath)
         {
             List<Person> people = new List<Person>();
 
@@ -43,7 +47,7 @@ namespace micro_sim
             return people;
         }
 
-        public List<BirthProbability> xx(string csvpath)
+        public List<BirthProbability> GetBirthProbabilities(string csvpath)
         {
             List<BirthProbability> birthProbabilities = new List<BirthProbability>();
 
@@ -55,7 +59,7 @@ namespace micro_sim
                     birthProbabilities.Add(new BirthProbability()
                     {
                         Age = int.Parse(line[0]),
-                        NbrOfChildren = int.Parse(line[1]),
+                        NumberOfKids = int.Parse(line[1]),
                         P = double.Parse(line[2])
                     });
                 }
@@ -63,7 +67,7 @@ namespace micro_sim
             return birthProbabilities;
         }
 
-        public List<DeathProbability> xx(string csvpath)
+        public List<DeathProbability> GetDeathProbabilities(string csvpath)
         {
             List<DeathProbability> deathProbabilities = new List<DeathProbability>();
 
