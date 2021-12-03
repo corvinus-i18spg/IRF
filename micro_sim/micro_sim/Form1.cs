@@ -141,5 +141,10 @@ namespace micro_sim
                 }
             }
         }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            Similation();
+        }
     }
 }
