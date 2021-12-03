@@ -146,5 +146,13 @@ namespace micro_sim
         {
             Similation();
         }
+
+        private void BtnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog()
+            {
+
+            };
+        }
     }
 }

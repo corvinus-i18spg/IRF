@@ -65,6 +65,7 @@ namespace micro_sim
             this.BtnBrowse.TabIndex = 2;
             this.BtnBrowse.Text = "Browse";
             this.BtnBrowse.UseVisualStyleBackColor = true;
+            this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
             // BtnStart
             // 
